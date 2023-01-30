@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag pbhallam/azurite:$(date +%s)
+      run: docker build . --platform=linux/amd64 --file Dockerfile --tag pbhallam/azurite:$(date +%s)
